@@ -1,41 +1,49 @@
 # PhpStorm
 jetbrains_product 'PhpStorm' do
-  version '9.0.2'
+  version node['jetbrains']['version']
 end
 
 # RubyMine
 jetbrains_product 'RubyMine' do
-  version '7.1.4'
+  version node['jetbrains']['version']
 end
 
 # IntelliJ IDEA Ultimate
 jetbrains_product 'ideaIU' do
-  version '14.1.4'
+  version node['jetbrains']['version']
 end
 
 # IntelliJ IDEA Community
 jetbrains_product 'ideaIC' do
-  version '14.1.4'
+  version node['jetbrains']['version']
 end
 
 # Pycharm  Professional
 jetbrains_product 'pycharm-professional' do
-  version '4.5.4'
+  version node['jetbrains']['version']
 end
 
 # Pycharm Community
 jetbrains_product 'pycharm-community' do
-  version '4.5.4'
+  version node['jetbrains']['version']
 end
 
-jetbrains_product 'clion' do
-  version '1.1.1'
+jetbrains_product 'CLion' do
+  version node['jetbrains']['version']
 end
 
 jetbrains_product 'WebStorm' do
-  version '10.0.4'
+  version node['jetbrains']['version']
 end
 
-jetbrains_product 'AppCode' do
-  version '3.2'
+jetbrains_product 'datagrip' do
+  version node['jetbrains']['version']
+end
+
+jetbrains_product 'goland' do
+  version node['jetbrains']['version']
+end
+
+jetbrains_product 'Rider' do
+  version node['jetbrains']['rider']['version']
 end

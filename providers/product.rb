@@ -17,7 +17,7 @@ action :install do
       url = "#{node['jetbrains']['download_base_url']}/idea/#{product}-#{new_resource.version}.tar.gz"
     when 'ideaIC'
       url = "#{node['jetbrains']['download_base_url']}/idea/#{product}-#{new_resource.version}.tar.gz"
-    when 'clion'
+    when 'CLion'
       url = "#{node['jetbrains']['download_base_url']}/cpp/#{product}-#{new_resource.version}.tar.gz"
     when 'pycharm-community'
       url = "#{node['jetbrains']['download_base_url']}/python/#{product}-#{new_resource.version}.tar.gz"
@@ -25,10 +25,14 @@ action :install do
       url = "#{node['jetbrains']['download_base_url']}/python/#{product}-#{new_resource.version}.tar.gz"
     when 'WebStorm'
       url = "#{node['jetbrains']['download_base_url']}/webstorm/#{product}-#{new_resource.version}.tar.gz"
-    when 'AppCode'
-      url = "#{node['jetbrains']['download_base_url']}/objc/#{product}-#{new_resource.version}.tar.gz"
+    when 'datagrip'
+      url = "#{node['jetbrains']['download_base_url']}/datagrip/#{product}-#{new_resource.version}.tar.gz"
+    when 'goland'
+      url = "#{node['jetbrains']['download_base_url']}/go/#{product}-#{new_resource.version}.tar.gz"
+    when 'Rider'
+      url = "#{node['jetbrains']['download_base_url']}/rider/JetBrains.#{product}-#{new_resource.version}.tar.gz"
     else
-      fail "#{product} is not a recognized Jetbrains product, please specify a download_url manually"
+      raise "#{product} is not a recognized Jetbrains product, please specify a download_url manually"
     end
   end
 
