@@ -1,8 +1,7 @@
-#!/usr/bin/env rake
-
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 require 'foodcritic'
+require 'cookstyle'
 
 namespace :style do
   desc 'Run Ruby style checks'
