@@ -4,6 +4,7 @@ gem 'berkshelf', '~> 6'
 gem 'chef', '~> 13'
 
 group :unit do
+  gem 'cookstyle'
   gem 'foodcritic'
   gem 'rubocop'
   gem 'chefspec'
