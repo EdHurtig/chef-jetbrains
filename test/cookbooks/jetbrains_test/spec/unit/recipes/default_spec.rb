@@ -4,7 +4,7 @@ describe 'jetbrains::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       ChefSpec::ServerRunner.new(step_into: ['jetbrains']) do |node|
-        node.set['jetbrains']['product'] = 'PhpStorm'
+        node.default['jetbrains']['product'] = 'PhpStorm'
       end.converge(described_recipe)
     end
     before do

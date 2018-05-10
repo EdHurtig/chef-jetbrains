@@ -34,6 +34,9 @@ action :install do
     when 'Rider'
       url_dir = '/rider/JetBrains.'
       product = product.capitalize
+    when 'toolbox'
+      url_dir = '/toolbox/jetbrains-'
+      name = 'jetbrains-toolbox'
     else
       raise "#{product} is not a recognized Jetbrains product, please specify a download_url manually"
     end
