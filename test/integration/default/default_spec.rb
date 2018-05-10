@@ -1,7 +1,7 @@
 title 'jetbrains::default'
 # 'Installs all the jetbrains products'
 %w(
-  toolbox
+  jetbrains-toolbox
   PhpStorm
   RubyMine
   ideaIU
