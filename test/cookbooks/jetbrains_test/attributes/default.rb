@@ -7,7 +7,7 @@ default['jetbrains']['toolbox']['version'] = '1.8.3678'
 
 default['jetbrains']['version'] = "#{year}.#{minor}.#{patch}"
 
-default['jetbrains']['clion']['version']  = baseline
+default['jetbrains']['clion']['version'] = baseline
 default['jetbrains']['datagrip']['version'] = baseline
 default['jetbrains']['goland']['version'] = latest
 default['jetbrains']['ideaic']['version'] = latest

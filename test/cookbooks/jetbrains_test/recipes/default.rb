@@ -21,15 +21,15 @@ jetbrains_product 'ideaIC' do
 end
 
 jetbrains_product 'pycharm-professional' do
-  version node.attribute?('jetbrains/pycharm-professional/version')  ? node['jetbrains']['version'] : node['jetbrains']['pycharm-professional']['version']
+  version node.attribute?('jetbrains/pycharm-professional/version') ? node['jetbrains']['version'] : node['jetbrains']['pycharm-professional']['version']
 end
 
 jetbrains_product 'pycharm-community' do
-  version node.attribute?('jetbrains/pycharm-community/version')  ? node['jetbrains']['version'] : node['jetbrains']['pycharm-community']['version']
+  version node.attribute?('jetbrains/pycharm-community/version') ? node['jetbrains']['version'] : node['jetbrains']['pycharm-community']['version']
 end
 
 jetbrains_product 'CLion' do
-  version node.attribute?('jetbrains/clion/version')  ? node['jetbrains']['version'] : node['jetbrains']['clion']['version']
+  version node.attribute?('jetbrains/clion/version') ? node['jetbrains']['version'] : node['jetbrains']['clion']['version']
 end
 
 jetbrains_product 'WebStorm' do
@@ -41,7 +41,7 @@ jetbrains_product 'datagrip' do
 end
 
 jetbrains_product 'goland' do
-  version node.attribute?('jetbrains/goland/version')  ? node['jetbrains']['version'] : node['jetbrains']['goland']['version']
+  version node.attribute?('jetbrains/goland/version') ? node['jetbrains']['version'] : node['jetbrains']['goland']['version']
 end
 
 jetbrains_product 'Rider' do
