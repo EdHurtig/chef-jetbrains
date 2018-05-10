@@ -11,6 +11,11 @@ provisioner:
 platforms:
   - name: ubuntu-12.04
   - name: ubuntu-14.04
+  - name: ubuntu-16.04
+  - name: ubuntu-18.04
+
+verifier:
+  name: inspec
 
 suites:
   - name: default

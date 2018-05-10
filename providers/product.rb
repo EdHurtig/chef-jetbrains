@@ -5,36 +5,47 @@ action :install do
 
   product = new_resource.product || new_resource.name
 
+  version = new_resource.version
+
   if new_resource.download_url
     url = new_resource.download_url
   else
     case product
     when 'RubyMine'
-      url = "#{node['jetbrains']['download_base_url']}/ruby/#{product}-#{new_resource.version}.tar.gz"
+      url_dir = '/ruby/'
     when 'PhpStorm'
-      url = "#{node['jetbrains']['download_base_url']}/webide/#{product}-#{new_resource.version}.tar.gz"
+      url_dir = '/webide/'
     when 'ideaIU'
-      url = "#{node['jetbrains']['download_base_url']}/idea/#{product}-#{new_resource.version}.tar.gz"
+      url_dir = '/idea/'
     when 'ideaIC'
-      url = "#{node['jetbrains']['download_base_url']}/idea/#{product}-#{new_resource.version}.tar.gz"
-    when 'clion'
-      url = "#{node['jetbrains']['download_base_url']}/cpp/#{product}-#{new_resource.version}.tar.gz"
+      url_dir = '/idea/'
+    when 'CLion'
+      url_dir = '/cpp/'
     when 'pycharm-community'
-      url = "#{node['jetbrains']['download_base_url']}/python/#{product}-#{new_resource.version}.tar.gz"
+      url_dir = '/python/'
     when 'pycharm-professional'
-      url = "#{node['jetbrains']['download_base_url']}/python/#{product}-#{new_resource.version}.tar.gz"
+      url_dir = '/python/'
     when 'WebStorm'
-      url = "#{node['jetbrains']['download_base_url']}/webstorm/#{product}-#{new_resource.version}.tar.gz"
-    when 'AppCode'
-      url = "#{node['jetbrains']['download_base_url']}/objc/#{product}-#{new_resource.version}.tar.gz"
+      url_dir = '/webstorm/'
+    when 'datagrip'
+      url_dir = '/datagrip/'
+    when 'goland'
+      url_dir = '/go/'
+    when 'Rider'
+      url_dir = '/rider/JetBrains.'
+      product = product.capitalize
+    when 'toolbox'
+      url_dir = '/toolbox/jetbrains-'
+      name = 'jetbrains-toolbox'
     else
-      fail "#{product} is not a recognized Jetbrains product, please specify a download_url manually"
+      raise "#{product} is not a recognized Jetbrains product, please specify a download_url manually"
     end
+    url = "#{node['jetbrains']['download_base_url']}#{url_dir}#{product}-#{version}.tar.gz"
   end
 
   ark name do
     url url
-    version new_resource.version
-    path "#{node['jetbrains']['install_base_folder']}/#{name}-#{new_resource.version}"
+    version version
+    path "#{node['jetbrains']['install_base_folder']}/#{name}-#{version}"
   end
 end

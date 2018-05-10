@@ -16,10 +16,10 @@ MethodLength:
 CyclomaticComplexity:
   Max: 10
 
-SingleSpaceBeforeFirstArg:
+SpaceBeforeFirstArg:
   Exclude:
     - metadata.rb
 
 AllCops:
   Exclude:
-    - 'vendor/bundle/**/*'
+    - 'vendor/**/*'

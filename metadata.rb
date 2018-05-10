@@ -8,5 +8,5 @@ version          '0.0.1'
 
 supports 'ubuntu', '>= 12.04'
 
-depends 'ark', '~> 0.4'
+depends 'ark'
 depends 'java'
