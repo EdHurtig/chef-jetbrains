@@ -32,7 +32,8 @@ action :install do
     when 'goland'
       url_dir = '/go/'
     when 'Rider'
-      url_dir = '/rider/Jetbrains.'
+      url_dir = '/rider/JetBrains.'
+      product = product.capitalize
     else
       raise "#{product} is not a recognized Jetbrains product, please specify a download_url manually"
     end
